@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-alabaster: #E8EBE4;
+  --color-viridian: #498467;
+  --color-viridian-light: #C2FFC7;
+  --color-colar: #EF8354;
+  --color-colar-light: #FFF6B3;
+  --color-oxfordBlue: #011936;
+  --color-oxfordBlue-light: #DAFFFB;
+}
+
 :root {
   @apply overflow-x-hidden box-border m-0 p-0;
 }
