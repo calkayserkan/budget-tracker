@@ -3,13 +3,13 @@ import React from 'react'
 function User() {
   return (
     <div className="relative h-52 w-screen flex flex-col justify-center items-center text-black user-pattern mb-10">
-      <div className="absolute bottom-[-64] h-32 w-full  sm:w-lg md:w-xl lg:w-2xl xl:w-3xl rounded-2xl border border-gray-100 bg-white-100 backdrop-blur-xs backdrop-filter shadow-lg">
+      <div className="absolute bottom-[-64] h-32 w-full  sm:w-lg md:w-xl lg:w-2xl xl:w-3xl rounded-2xl border border-gray-100 bg-viridian/10 backdrop-blur-xs backdrop-filter shadow-lg">
         <div className="h-full w-full flex justify-center items-center gap-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="size-20 text-stone-800"
+            className="size-20 text-oxfordBlue"
           >
             <path
               fillRule="evenodd"
@@ -17,7 +17,7 @@ function User() {
               clipRule="evenodd"
             />
           </svg>
-          <p className="text-3xl">Username</p>
+          <p className="text-3xl text-oxfordBlue">Serkan Çalkay</p>
         </div>
       </div>
     </div>

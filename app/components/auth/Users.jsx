@@ -8,7 +8,7 @@ function Users() {
         router.push("/home");
       };
   return (
-    <div className=" flex flex-col w-screen h-screen justify-center items-center text-black gap-15 bg-gradient-to-tr from-stone-100 to-[#eff2ef]">
+    <div className=" flex flex-col w-screen h-screen justify-center items-center text-black gap-15 bg-gradient-to-tr from-alabaster to-viridian-light">
     <div className="text-4xl text-center">
       Hoşgeldiniz Hangi Kullanıcı İle Devam Etmek İstersiniz ?
     </div>

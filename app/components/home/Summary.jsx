@@ -1,153 +1,66 @@
-import React from 'react'
+import React from "react";
+import CustomPieChart from "../charts/CustomPieChart";
+import LineCharts from "../charts/LineCharts";
 
 function Summary() {
   return (
-    <div className="min-h-fit my-1 w-full md:w-4/5 lg:w-3/5  text-center justify-center items-center">
-      {/* <p className="text-3xl text-center mb-10">Summary</p> */}
-      <div className="text-start">
-        <p className="text-start">last 30 days</p>
-        <div className="grid grid-cols-2 grid-rows-2 gap-10 py-5">
-          <div className="summary-card">
-            <div className="summary-card-content">
-              <div className="summary-card-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-10 text-[#e1e7e1]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a.75.75 0 0 1-.75-.75V4.66L7.3 6.76a.75.75 0 0 1-1.1-1.02l3.25-3.5a.75.75 0 0 1 1.1 0l3.25 3.5a.75.75 0 1 1-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0 1 10 18Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+    <div className="min-h-fit my-1 w-full md:w-4/5 lg:w-4/5  text-center justify-center items-center mt-5">
+      <p className="text-2xl mb-5">Summary</p>
+      <div className="w-full h-[60dvh] grid grid-cols-5 grid-rows-6 gap-4">
+        <div className="col-span-2 row-span-6 summary-card flex flex-col justify-center items-center ">
+          <div className=" h-3/5 w-full grid grid-cols-2 justify-around items-center gap-10 px-5 ">
+            <div className="row-span-4 summary-card-l3m border-oxfordBlue">
+              <div className="h-1/4 bg-oxfordBlue text-oxfordBlue-light summary-card-l3m-title">
+                income
               </div>
-              <p className="summary-card-amount">25.000 TL</p>
+              <div className="h-3/4 summary-card-l3m-content flex flex-col justify-center items-center">
+                <div className="summary-card-l3m-content-element ">
+                  Salary : $400
+                </div>
+                <div className="summary-card-l3m-content-element ">
+                  rental income : $300
+                </div>
+                <div className="summary-card-l3m-content-element ">
+                  investments : $300
+                </div>
+              </div>
             </div>
-            <div className="summary-card-bottom">
-              <p className="summary-card-link">view all</p>
+            <div className="row-span-4 summary-card-l3m border-red-900">
+              <div className="h-1/4 bg-red-900 summary-card-l3m-title text-red-200">
+                expense
+              </div>
+              <div className="h-3/4 summary-card-l3m-content flex flex-col justify-center items-center">
+                <div className="summary-card-l3m-content-element ">
+                  Food : $100
+                </div>
+                <div className="summary-card-l3m-content-element ">
+                  invoices : $300
+                </div>
+                <div className="summary-card-l3m-content-element ">
+                  Entertainment : $100
+                </div>
+              </div>
             </div>
           </div>
-          <div className="summary-card">
-            <div className="summary-card-content">
-              <div className="summary-card-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-10 text-[#e1e7e1]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 2a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V2.75A.75.75 0 0 1 10 2Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p className="summary-card-amount">20.000 TL</p>
-            </div>
-            <div className="summary-card-bottom">
-              <p className="summary-card-link">view all</p>
-            </div>
+          <div className="h-2/5 w-full">
+            <CustomPieChart />
           </div>
-          <div className="summary-card col-span-2">
-            <div className="summary-card-content">
-              <div className="summary-card-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-10 text-[#e1e7e1]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a.75.75 0 0 1-.75-.75V4.66L7.3 6.76a.75.75 0 0 1-1.1-1.02l3.25-3.5a.75.75 0 0 1 1.1 0l3.25 3.5a.75.75 0 1 1-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0 1 10 18Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p className="summary-card-amount">5.000 TL</p>
-            </div>
-            <div className="summary-card-bottom ">
-              <p className="summary-card-link">view all</p>
-            </div>
-          </div>
+        </div>
+        <div className="col-span-3 row-span-2 col-start-3 summary-card">
+          <LineCharts lineColor="#011936" />
+        </div>
+        <div className="col-span-3 row-span-2 col-start-3 row-start-3 summary-card">
+          <LineCharts lineColor="#82181a" />
+        </div>
+        <div className="col-span-3 row-span-2 col-start-3 row-start-5 summary-card">
+          <LineCharts lineColor="#498467" />
         </div>
       </div>
-      <div>
-        <p className="text-start">All Time</p>
-        <div className="grid grid-cols-2 grid-rows-2 gap-10 py-5">
-          <div className="summary-card">
-            <div className="summary-card-content">
-              <div className="summary-card-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-10 text-[#e1e7e1]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a.75.75 0 0 1-.75-.75V4.66L7.3 6.76a.75.75 0 0 1-1.1-1.02l3.25-3.5a.75.75 0 0 1 1.1 0l3.25 3.5a.75.75 0 1 1-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0 1 10 18Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p className="summary-card-amount">50.000 TL</p>
-            </div>
-            <div className="summary-card-bottom">
-              <p className="summary-card-link">view all</p>
-            </div>
-          </div>
-          <div className="summary-card">
-            <div className="summary-card-content">
-              <div className="summary-card-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-10 text-[#e1e7e1]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 2a.75.75 0 0 1 .75.75v12.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V2.75A.75.75 0 0 1 10 2Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p className="summary-card-amount">40.000 TL</p>
-            </div>
-            <div className="summary-card-bottom">
-              <p className="summary-card-link">view all</p>
-            </div>
-          </div>
-          <div className="summary-card col-span-2">
-            <div className="summary-card-content">
-              <div className="summary-card-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="size-10 text-[#e1e7e1]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a.75.75 0 0 1-.75-.75V4.66L7.3 6.76a.75.75 0 0 1-1.1-1.02l3.25-3.5a.75.75 0 0 1 1.1 0l3.25 3.5a.75.75 0 1 1-1.1 1.02l-1.95-2.1v12.59A.75.75 0 0 1 10 18Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <p className="summary-card-amount">10.000 TL</p>
-            </div>
-            <div className="summary-card-bottom ">
-              <p className="summary-card-link">view all</p>
-            </div>
-          </div>
-        </div>
+      <div className="w-full h-1/5 flex justify-center items-center bg-white mt-5">
+        <div>a</div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Summary
+export default Summary;

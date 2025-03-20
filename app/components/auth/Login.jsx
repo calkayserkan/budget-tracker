@@ -8,7 +8,7 @@ function Login() {
     router.push("/auth/register");
   };
   const userClick = () => {
-    router.push("/auth/users");
+    router.push("/auth/account");
   };
   return (
     <div className="flex w-screen h-screen justify-center items-center landing-pattern">
@@ -66,7 +66,7 @@ function Login() {
                 <div className="text-sm">
                   <a
                     href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
+                    className="font-semibold text-oxfordBlue hover:text-blue-700"
                   >
                     Forgot password?
                   </a>
@@ -79,7 +79,7 @@ function Login() {
                   type="password"
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-oxfordBlue outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
                 />
               </div>
             </div>
@@ -88,18 +88,18 @@ function Login() {
               <button
                 type="submit"
                 onClick={userClick}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex w-full justify-center rounded-md bg-oxfordBlue px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Sign in
               </button>
             </div>
           </form>
 
-          <p className="mt-10 text-center text-sm/6 text-gray-500">
+          <p className="mt-10 text-center text-sm/6 text-oxfordBlue">
             Not a member?{" "}
             <a
               onClick={handleClick}
-              className="font-semibold text-indigo-600 hover:text-indigo-500 cursor-pointer"
+              className="font-semibold text-oxfordBlue hover:text-blue-700 cursor-pointer"
             >
               Register
             </a>
