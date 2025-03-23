@@ -11,7 +11,7 @@
 }
 
 :root {
-  @apply overflow-x-hidden box-border m-0 p-0;
+  @apply overflow-x-hidden box-border m-0 p-0 font-mono;
 }
 html {
   @apply box-border m-0 p-0;

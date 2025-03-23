@@ -1,11 +1,17 @@
+"use client"
 import React from "react";
 import CustomPieChart from "../charts/CustomPieChart";
 import LineCharts from "../charts/LineCharts";
+import { useRouter } from "next/navigation";
 
 function Summary() {
+  const router = useRouter();
+  const clickHandler = () => {
+    router.push("/dashboard");
+  }
   return (
-    <div className="min-h-fit my-1 w-full md:w-4/5 lg:w-4/5  text-center justify-center items-center mt-5">
-      <p className="text-2xl mb-5">Summary</p>
+    <div className="min-h-fit my-1 w-full md:w-4/5 lg:w-4/5  text-center justify-center items-center">
+      <p className="text-2xl mb-5 font-bold">Summary</p>
       <div className="w-full h-[60dvh] grid grid-cols-5 grid-rows-6 gap-4">
         <div className="col-span-2 row-span-6 summary-card flex flex-col justify-center items-center ">
           <div className=" h-3/5 w-full grid grid-cols-2 justify-around items-center gap-10 px-5 ">
@@ -56,9 +62,14 @@ function Summary() {
           <LineCharts lineColor="#498467" />
         </div>
       </div>
-      <div className="w-full h-1/5 flex justify-center items-center bg-white mt-5">
-        <div>a</div>
-      </div>
+      <button
+        onClick={clickHandler}
+        className="w-full h-1/5 flex justify-center items-center 
+       bg-white my-5 py-2 rounded-2xl shadow-xl cursor-pointer transition-all ease-in-out
+       hover:bg-oxfordBlue hover:text-oxfordBlue-light   hover:shadow-2xl "
+      >
+        <p className="font-bold font-mono ">Edit Your Budget</p>
+      </button>
     </div>
   );
 }
